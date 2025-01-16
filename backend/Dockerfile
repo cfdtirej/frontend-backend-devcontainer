@@ -4,6 +4,8 @@ FROM python_base AS development
 
 ENV STAGE=development
 
+ENV UV_LINK_MODE=copy
+
 RUN <<EOF
     apt-get update && apt-get install -y --no-install-recommends \
         git
