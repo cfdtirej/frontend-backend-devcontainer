@@ -1,0 +1,14 @@
+{
+    "name": "backend",
+    "dockerComposeFile": "../../compose.yml",
+    "service": "backend",
+    "workspaceFolder": "/src/backend",
+    "customizations": {
+        "settings": {
+            "files.insertFinalNewline": true,
+            "files.trimFinalNewlines": true,
+            "files.trimTrailingWhitespace": true
+        }
+    },
+    "remoteUser": "backend"
+}

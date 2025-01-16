@@ -1,0 +1,13 @@
+services:
+
+  backend:
+    build:
+      context: backend
+      dockerfile: Dockerfile
+      target: development
+    tty: true
+    init: true
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/src:cached
