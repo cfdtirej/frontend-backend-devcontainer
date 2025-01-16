@@ -11,3 +11,19 @@ services:
       - "8000:8000"
     volumes:
       - .:/src:cached
+
+  frontend:
+    build:
+      context: frontend
+      dockerfile: Dockerfile
+      target: development
+    tty: true
+    init: true
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/src:cached
+      - /src/frontend/node_modules
+      - /src/frontend/.next
+    depends_on:
+      - backend
