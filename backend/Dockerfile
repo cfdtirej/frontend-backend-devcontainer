@@ -1,5 +1,8 @@
 FROM python:3.12-slim-bookworm AS python_base
 
+ENV PYTHONDONTWRITEBYTECODE=1
+
+
 FROM python_base AS development
 
 ENV STAGE=development
