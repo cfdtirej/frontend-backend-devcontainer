@@ -17,8 +17,8 @@ EOF
 
 ARG USER_NAME=backend
 ARG GROUP_NAME=backend
-ARG UID=${UID:-1000}
-ARG GID=${UID:-1000}
+ARG UID=1000
+ARG GID=65532
 
 RUN <<EOF
     groupadd --gid ${GID} ${GROUP_NAME}
@@ -34,4 +34,4 @@ RUN uv sync --frozen --no-cache
 
 USER ${USER_NAME}
 
-CMD uv run uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+CMD ["uv", "run", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
