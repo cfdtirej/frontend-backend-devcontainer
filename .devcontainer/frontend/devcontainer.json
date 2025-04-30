@@ -10,5 +10,6 @@
             "files.trimTrailingWhitespace": true
         }
     },
-    "remoteUser": "node"
+    "remoteUser": "node",
+    "shutdownAction": "none"
 }
